@@ -1,13 +1,17 @@
 import './App.css';
 
-function App(props) {
+export function App(props) {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>{props.message}</h1>
+                <h1>{props.text}</h1>
             </header>
         </div>
     );
 }
 
-export default App;
+export function Message(props) {
+    return (
+        <p className="Message">{props.message}</p>
+    );
+}

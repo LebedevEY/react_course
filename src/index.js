@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { App } from './App';
+import { Message } from "./App";
 
-function sayHello (myMessage) {
-    const message = myMessage;
-    return message;
-}
+const text = 'До меня кажется дошло...';
+const message = 'Вот так надо?';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App message={sayHello('Hello GB!')} />
+        <App text={text} />
+        <Message message={message} />
     </React.StrictMode>,
     document.getElementById("root")
 );
