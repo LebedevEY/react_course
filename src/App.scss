@@ -1,7 +1,42 @@
-.App-header {
-  margin: 15% auto 0;
-  width: 50%;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  width: 680px;
+  min-height: 480px;
+  margin: 0 auto;
+  justify-content: space-between;
+  background-color: #005885;
+  border-radius: 5px;
+
+  li {
+    list-style-type: none;
+    color: white;
+  }
+
+  span {
+    color: red;
+  }
+}
+
+.input_form {
+  align-self: center;
+
+  input {
+    width: 280px;
+    height: 20px;
+  }
+
+  button {
+    width: 100px;
+    height: 24px;
+
+    :hover {
+      background-color: darkgray;
+    }
+  }
 }
