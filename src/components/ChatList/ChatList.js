@@ -2,6 +2,7 @@ import { List, ListItem, ListItemIcon } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { AccountCircle } from "@material-ui/icons";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import styles from "./ChatList.css";
 
 const useStyles = makeStyles(() => {
@@ -18,6 +19,7 @@ const useStyles = makeStyles(() => {
 });
 
 export function ChatList(selected, handleListItemClick) {
+  const { chatID } = useParams();
   const [chats] = useState([
     { name: "Room 1", id: 1 },
     { name: "Room 2", id: 2 },
@@ -25,7 +27,8 @@ export function ChatList(selected, handleListItemClick) {
   ]);
 
   const s = useStyles();
-  console.log(handleListItemClick);
+
+  console.log(chats.map((chat) => chat.id));
 
   return (
     <List className={"chat_list"}>
@@ -34,7 +37,7 @@ export function ChatList(selected, handleListItemClick) {
           className={s.item}
           button={true}
           key={chat.id}
-          selected={chat.id === 1}
+          selected={chatID === 1}
           onClick={handleListItemClick}
         >
           <ListItemIcon>

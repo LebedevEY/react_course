@@ -64,6 +64,8 @@ export function App() {
                 autoFocus={true}
                 type="text"
                 value={value}
+                fullWidth={true}
+                placeholder={"Введите сообщение..."}
                 onChange={(event) => setValue(event.target.value)}
                 onKeyPress={handleKeySendMessage}
               />

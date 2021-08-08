@@ -28,9 +28,6 @@ body {
   width: 1160px;
   display: flex;
 }
-.input_form .input {
-  width: inherit;
-}
 
 .message_list {
   list-style-type: none;
