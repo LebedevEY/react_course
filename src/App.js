@@ -6,6 +6,12 @@ import { useEffect, useState } from "react";
 import { Header } from "./components";
 import { ChatList } from "./components/ChatList/ChatList";
 
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
+
 export function App() {
   const [messageList, setMessageList] = useState([]);
   const [value, setValue] = useState("");
@@ -31,17 +37,9 @@ export function App() {
 
   const handleKeySendMessage = ({ code }) => {
     if (code === "Enter") {
-      console.log();
-      setMessageList((state) => [...state, { value, author: "User" }]);
-      setValue("");
+      handleSendMessage();
     }
   };
-
-  const useStyles = makeStyles((theme) => ({
-    button: {
-      margin: theme.spacing(1),
-    },
-  }));
 
   const classes = useStyles();
 

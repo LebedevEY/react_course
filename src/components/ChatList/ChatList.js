@@ -11,13 +11,13 @@ const useStyles = makeStyles(() => {
         backgroundColor: "#2b5278",
       },
       "&.Mui-selected:hover": {
-        backgroundColor: "#2b5278",
+        backgroundColor: "#2b5260",
       },
     },
   };
 });
 
-export function ChatList() {
+export function ChatList(selected, handleListItemClick) {
   const [chats] = useState([
     { name: "Room 1", id: 1 },
     { name: "Room 2", id: 2 },
@@ -25,11 +25,18 @@ export function ChatList() {
   ]);
 
   const s = useStyles();
+  console.log(handleListItemClick);
 
   return (
     <List className={"chat_list"}>
       {chats.map((chat) => (
-        <ListItem className={s.item} button={true} key={chat.id}>
+        <ListItem
+          className={s.item}
+          button={true}
+          key={chat.id}
+          selected={chat.id === 1}
+          onClick={handleListItemClick}
+        >
           <ListItemIcon>
             <AccountCircle fontSize="large" className={styles.icon} />
           </ListItemIcon>
