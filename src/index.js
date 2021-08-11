@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./index.css";
-import { App } from "./App";
+// import { App } from "./App";
+import { ChatApp } from "./Pages";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route path="/chat" component={() => <App />} />
+        <Route path="/chat" component={() => <ChatApp />} />
 
         <Route
           exact={true}
