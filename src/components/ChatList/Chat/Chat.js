@@ -1,15 +1,12 @@
 import { ListItem, ListItemIcon, makeStyles } from "@material-ui/core";
 import { AccountCircle } from "@material-ui/icons";
-import styles from "./chat.css";
+import styles from "./chat.module.css";
 
 const useStyles = makeStyles(() => {
   return {
     item: {
       "&.Mui-selected": {
-        backgroundColor: "#2b5278",
-      },
-      "&.Mui-selected:hover": {
-        backgroundColor: "#2b5278",
+        backgroundColor: "#aea7cf",
       },
     },
   };
@@ -25,7 +22,7 @@ export function Chat({ title, selected, handleListItemClick }) {
       selected={selected}
       onClick={handleListItemClick}
     >
-      <ListItemIcon>
+      <ListItemIcon className={styles.chat}>
         <AccountCircle fontSize="large" className={styles.icon} />
         <h1>{title}</h1>
       </ListItemIcon>

@@ -10,7 +10,7 @@ export const ChatList = ({ chats }) => {
       {chats.map((chat, index) => {
         return (
           <Link key={index} to={`/chat/${chat.name}`}>
-            <Chat title={chat.name} selected={roomID === chat.id} />
+            <Chat title={chat.name} selected={roomID === chat.name} />
           </Link>
         );
       })}

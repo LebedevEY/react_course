@@ -1,4 +1,4 @@
-import styles from "./layout.css";
+import styles from "./layout.module.css";
 
 export function Layout({ header, chats, children }) {
   return (

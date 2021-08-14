@@ -1,23 +1,15 @@
-import { Button, Input, makeStyles, Icon } from "@material-ui/core";
+import { Button, Input, Icon } from "@material-ui/core";
+import { useRef } from "react";
 import { Message } from "./Message";
-
-const useStyles = makeStyles(() => {
-  return {
-    input: {
-      color: "#9a9fa1",
-      padding: "10px 15px",
-      fontSize: " 15px",
-    },
-  };
-});
+import styles from "./messageList.module.css";
 
 export const MessageList = ({
   messages,
   value,
-  sendMessage,
   handleChangeValue,
+  sendMessage,
 }) => {
-  const s = useStyles();
+  const ref = useRef();
 
   const handleSendMessage = () => {
     if (value) {
@@ -33,28 +25,29 @@ export const MessageList = ({
 
   return (
     <>
-      <div>
+      <div ref={ref}>
         {messages.map((message, id) => (
           <Message key={id} {...message} />
         ))}
       </div>
-      <Input
-        className={s.input}
-        value={value}
-        onChange={handleChangeValue}
-        onKeyPress={handlePressInput}
-        fullWidth={true}
-        autoFocus={true}
-        placeholder="Введите сообщение..."
-      />
-      <Button
-        variant="contained"
-        color="primary"
-        className={s.button}
-        endIcon={<Icon>send</Icon>}
-      >
-        Send
-      </Button>
+      <div className={styles.input}>
+        <Input
+          value={value}
+          onChange={handleChangeValue}
+          onKeyPress={handlePressInput}
+          fullWidth={true}
+          autoFocus={true}
+          placeholder="Введите сообщение..."
+        />
+        <Button
+          onClick={handleSendMessage}
+          variant="contained"
+          color="primary"
+          endIcon={<Icon>send</Icon>}
+        >
+          Send
+        </Button>
+      </div>
     </>
   );
 };

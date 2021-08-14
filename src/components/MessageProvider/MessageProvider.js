@@ -1,26 +1,24 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export function MessageProvider({ children }) {
   const { roomID } = useParams();
 
   const [chats, setChats] = useState([
-    { name: "Room_1", id: 1 },
-    { name: "Room_2", id: 2 },
-    { name: "Room_3", id: 3 },
+    { name: "room1", value: "" },
+    { name: "room2", value: "" },
   ]);
 
   const [messages, setMessages] = useState({
-    Room_1: [{ message: "Hello!", author: "User" }],
-    Room_2: [],
-    Room_3: [],
+    room1: [],
+    room2: [],
   });
 
   const updateChats = useCallback(
     (value = "") => {
       setChats((chats) =>
         chats.map((chat) => {
-          return chat.id === roomID ? { ...chat, value } : chat;
+          return chat.name === roomID ? { ...chat, value } : chat;
         }),
       );
     },
@@ -32,7 +30,7 @@ export function MessageProvider({ children }) {
       chats,
       allMessages: messages,
       messages: messages[roomID] || [],
-      value: chats.find((chat) => chat.id === roomID)?.value || "",
+      value: chats.find((chat) => chat.name === roomID)?.value || "",
       hasRoomById: Object.keys(messages).some((room) => room === roomID),
     };
   }, [chats, messages, roomID]);
@@ -40,7 +38,7 @@ export function MessageProvider({ children }) {
   const actions = useMemo(() => {
     return {
       sendMessage: (message) => {
-        const newMessage = { ...message, author: "User", date: new Date() };
+        const newMessage = { ...message, id: new Date() };
 
         setMessages((messages) => {
           return {
@@ -58,5 +56,26 @@ export function MessageProvider({ children }) {
       },
     };
   }, [roomID, updateChats]);
+
+  useEffect(() => {
+    if (messages[roomID] !== undefined) {
+      let timerId = null;
+      const lastMessage = messages[roomID][messages[roomID].length - 1];
+
+      if (lastMessage?.author === "User") {
+        timerId = setTimeout(
+          () =>
+            actions.sendMessage({
+              message: `Hello from bot to ${roomID}`,
+              author: "Bot",
+            }),
+          500,
+        );
+      }
+
+      return () => clearInterval(timerId);
+    }
+  }, [messages, roomID, actions]);
+
   return children([state, actions]);
 }
