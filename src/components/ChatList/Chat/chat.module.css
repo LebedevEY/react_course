@@ -1,0 +1,10 @@
+.icon {
+    color: darkslategrey;
+    margin-right: 5px;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
