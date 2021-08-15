@@ -8,7 +8,7 @@ import {
   Layout,
 } from "../components";
 
-export function ChatApp() {
+export function Chat() {
   const { push } = useHistory();
 
   useEffect(() => {

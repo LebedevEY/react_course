@@ -2,15 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./index.css";
-// import { App } from "./App";
-import { ChatApp } from "./Pages";
+import { Chat } from "./Pages";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route path="/chat" component={() => <ChatApp />} />
-
         <Route
           exact={true}
           path="/"
@@ -25,13 +22,14 @@ ReactDOM.render(
             </ul>
           )}
         />
+        <Route path="/chat" component={() => <Chat />} />
         <Route
           path="*"
           component={() => (
-            <>
+            <div>
               <h1>404, page not found</h1>
               <a href={"/chat"}>Go to chat</a>
-            </>
+            </div>
           )}
         />
       </Switch>

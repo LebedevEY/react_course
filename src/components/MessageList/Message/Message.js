@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import styles from "./message.module.css";
 
-export function Message({ author, message }) {
+export function Message({ author, message, date }) {
   return (
     <div
       className={classNames(styles.message, {
@@ -10,6 +10,9 @@ export function Message({ author, message }) {
     >
       <h3>{message}</h3>
       <p>{author}</p>
+      <p>
+        {date.getHours()}:{date.getMinutes()}
+      </p>
     </div>
   );
 }
