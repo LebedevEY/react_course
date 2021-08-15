@@ -1,12 +1,6 @@
 import { useEffect } from "react";
 import { Switch, Route, useHistory, Redirect } from "react-router-dom";
-import {
-  Header,
-  MessageProvider,
-  ChatList,
-  MessageList,
-  Layout,
-} from "../components";
+import { MessageProvider, ChatList, MessageList, Layout } from "../components";
 
 export function Chat() {
   const { push } = useHistory();
@@ -30,7 +24,7 @@ export function Chat() {
       <Route path={["/chat/:roomID", "/chat"]}>
         <MessageProvider>
           {([state, actions]) => (
-            <Layout header={<Header />} chats={<ChatList {...state} />}>
+            <Layout chats={<ChatList {...state} />}>
               {state.hasRoomById ? (
                 <Route path="/chat/:roomId">
                   <MessageList {...state} {...actions} />
