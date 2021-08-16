@@ -38,7 +38,7 @@ export function MessageProvider({ children }) {
   const actions = useMemo(() => {
     return {
       sendMessage: (message) => {
-        const newMessage = { ...message, id: new Date() };
+        const newMessage = { ...message, date: new Date() };
 
         setMessages((messages) => {
           return {
@@ -59,11 +59,11 @@ export function MessageProvider({ children }) {
 
   useEffect(() => {
     if (messages[roomID] !== undefined) {
-      let timerId = null;
+      let timerID = null;
       const lastMessage = messages[roomID][messages[roomID].length - 1];
 
       if (lastMessage?.author === "User") {
-        timerId = setTimeout(
+        timerID = setTimeout(
           () =>
             actions.sendMessage({
               message: `Hello from bot to ${roomID}`,
@@ -73,7 +73,7 @@ export function MessageProvider({ children }) {
         );
       }
 
-      return () => clearInterval(timerId);
+      return () => clearInterval(timerID);
     }
   }, [messages, roomID, actions]);
 
