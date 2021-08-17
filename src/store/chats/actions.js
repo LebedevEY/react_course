@@ -1,7 +1,7 @@
-import { CHANGE_MESSAGE_VALUE, CLEAR_MESSAGE_VALUE } from "./types";
+import { HANDLE_CHANGE_MESSAGE_VALUE, CLEAR_MESSAGE_VALUE } from "./types";
 
-export const changeMessageValue = (value, roomID) => ({
-  type: CHANGE_MESSAGE_VALUE,
+export const handleChangeMessageValue = (value, roomID) => ({
+  type: HANDLE_CHANGE_MESSAGE_VALUE,
   payload: { value, roomID },
 });
 

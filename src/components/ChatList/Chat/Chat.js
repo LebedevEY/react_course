@@ -1,5 +1,6 @@
 import { ListItem, ListItemIcon, makeStyles } from "@material-ui/core";
 import { AccountCircle } from "@material-ui/icons";
+import { memo } from "react";
 import styles from "./chat.module.css";
 
 const useStyles = makeStyles(() => {
@@ -12,7 +13,7 @@ const useStyles = makeStyles(() => {
   };
 });
 
-export function Chat({ title, selected, handleListItemClick }) {
+function ChatView({ name, selected, handleListItemClick }) {
   const s = useStyles();
 
   return (
@@ -24,8 +25,10 @@ export function Chat({ title, selected, handleListItemClick }) {
     >
       <ListItemIcon className={styles.chat}>
         <AccountCircle fontSize="large" className={styles.icon} />
-        <h1>{title}</h1>
+        <h1>{name}</h1>
       </ListItemIcon>
     </ListItem>
   );
 }
+
+export const Chat = memo(ChatView);

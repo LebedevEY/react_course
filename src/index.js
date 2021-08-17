@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import "./index.css";
 import { Header } from "./components";
 import { ThemeProvider } from "./components/ThemeContext";
-import { Chat } from "./pages";
-import { Profile } from "./pages/Profile";
+import { Chat, Profile } from "./pages";
 import { store } from "./store";
 
 const themes = {
@@ -19,7 +18,7 @@ const themes = {
 };
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
     <Provider store={store}>
       <BrowserRouter>
         <ThemeProvider themes={themes} initialTheme="dark">
@@ -31,10 +30,10 @@ ReactDOM.render(
               component={() => (
                 <ul>
                   <li>
-                    <a href={"/chat"}>Go to chat</a>
+                    <Link to="/chat">Go to chat</Link>
                   </li>
                   <li>
-                    <a href="#">Go to profile</a>
+                    <Link to="/profile">Go to profile</Link>
                   </li>
                 </ul>
               )}
@@ -54,6 +53,6 @@ ReactDOM.render(
         </ThemeProvider>
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>,
+  </>,
   document.getElementById("root"),
 );
