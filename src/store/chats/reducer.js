@@ -7,10 +7,9 @@ const initialState = {
   ],
 };
 
-const updateChats = (state, roomID, value) =>
+const updateChats = (state, roomId, value) =>
   state.chats.map((chat) => {
-    console.log(state.chats);
-    return chat.name === roomID ? { ...chat, value } : chat;
+    return chat.name === roomId ? { ...chat, value } : chat;
   });
 
 export const chatsReducer = (state = initialState, action) => {
@@ -18,7 +17,7 @@ export const chatsReducer = (state = initialState, action) => {
     case HANDLE_CHANGE_MESSAGE_VALUE:
       return {
         ...state,
-        chats: updateChats(state, action.payload.roomID, action.payload.value),
+        chats: updateChats(state, action.payload.roomId, action.payload.value),
       };
     case CLEAR_MESSAGE_VALUE:
       return {

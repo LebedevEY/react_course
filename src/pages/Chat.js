@@ -21,7 +21,7 @@ export function Chat() {
 
   return (
     <Switch>
-      <Route path={["/chat/:roomID", "/chat"]}>
+      <Route path={["/chat/:roomId", "/chat"]}>
         <Layout chats={<ChatList />}>
           <Route path="/chat/:roomId">
             <MessageList />

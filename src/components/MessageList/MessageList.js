@@ -10,22 +10,22 @@ import styles from "./messageList.module.css";
 export const MessageList = () => {
   const ref = useRef();
 
-  const { roomID } = useParams();
+  const { roomId } = useParams();
 
   const dispatch = useDispatch();
 
   const messages = useSelector((state) => {
-    return state.messages.messages[roomID] || [];
+    return state.messages.messages[roomId] || [];
   });
 
   const value = useSelector((state) => {
-    return state.chats.chats.find((chat) => chat.name === roomID)?.value || "";
+    return state.chats.chats.find((chat) => chat.name === roomId)?.value || "";
   });
 
   const handleSendMessage = () => {
     if (value) {
-      dispatch(sendMessage({ author: "User", message: value }, roomID));
-      dispatch(clearMessageValue(roomID));
+      dispatch(sendMessage({ author: "User", message: value }, roomId));
+      dispatch(clearMessageValue(roomId));
     }
   };
 
@@ -56,7 +56,7 @@ export const MessageList = () => {
         <Input
           value={value}
           onChange={(e) =>
-            dispatch(handleChangeMessageValue(e.target.value, roomID))
+            dispatch(handleChangeMessageValue(e.target.value, roomId))
           }
           onKeyPress={handlePressInput}
           fullWidth={true}

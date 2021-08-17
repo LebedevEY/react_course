@@ -1,6 +1,6 @@
 import { SEND_MESSAGE } from "./types";
 
-export const sendMessage = (message, roomID) => ({
+export const sendMessage = (message, roomId) => ({
   type: SEND_MESSAGE,
-  payload: { message, roomID },
+  payload: { message, roomId },
 });

@@ -9,7 +9,7 @@ const selector = (state) => {
 };
 
 export const ChatList = memo(() => {
-  const { roomID } = useParams();
+  const { roomId } = useParams();
   const chats = useSelector(selector);
 
   return (
@@ -17,7 +17,7 @@ export const ChatList = memo(() => {
       {chats.map((chat, index) => {
         return (
           <Link key={index} to={`/chat/${chat.name}`}>
-            <Chat name={chat.name} selected={roomID === chat.name} />
+            <Chat name={chat.name} selected={roomId === chat.name} />
           </Link>
         );
       })}
