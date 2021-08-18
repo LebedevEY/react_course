@@ -1,4 +1,8 @@
-import { HANDLE_CHANGE_MESSAGE_VALUE, CLEAR_MESSAGE_VALUE } from "./types";
+import {
+  HANDLE_CHANGE_MESSAGE_VALUE,
+  CLEAR_MESSAGE_VALUE,
+  ADD_NEW_CHAT,
+} from "./types";
 
 const initialState = {
   chats: [
@@ -23,6 +27,11 @@ export const chatsReducer = (state = initialState, action) => {
       return {
         ...state,
         chats: updateChats(state, action.payload, ""),
+      };
+    case ADD_NEW_CHAT:
+      return {
+        ...state,
+        chats: updateChats(state, action.payload.roomId, action.payload.value),
       };
     default:
       return state;

@@ -44,6 +44,8 @@ export const MessageList = () => {
   // useEffect(() => {
   //   handleScrollBottom();
   // }, [handleScrollBottom]);
+  //
+  // const myLog = () => console.log(ref.current);
 
   return (
     <>
