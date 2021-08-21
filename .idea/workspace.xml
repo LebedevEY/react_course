@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f0fab56-afd1-4268-b7e5-9963ec0d5324" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatList/addChat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatList/Chat/chat.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/Chat/chat.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/layout.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList/Message/message.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/Message/message.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList/messageList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/messageList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThemeContext/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThemeContext/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/profile/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/profile/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/profile/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/profile/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/profile/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/profile/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatList/addChat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/addChat.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
