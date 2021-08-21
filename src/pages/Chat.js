@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Switch, Route, useHistory, Redirect } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { ChatList, MessageList, Layout } from "../components";
 
 export function Chat() {
@@ -26,7 +26,6 @@ export function Chat() {
           <Route path="/chat/:roomId">
             <MessageList />
           </Route>
-          <Redirect to="/chat" />
         </Layout>
       </Route>
     </Switch>

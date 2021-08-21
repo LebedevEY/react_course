@@ -45,7 +45,7 @@ ReactDOM.render(
               component={() => (
                 <div>
                   <h1>404, page not found</h1>
-                  <a href={"/chat"}>Go to chat</a>
+                  <Link to="/chat">Go to chat</Link>
                 </div>
               )}
             />

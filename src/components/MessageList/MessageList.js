@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { handleChangeMessageValue, clearMessageValue } from "../../store/chats";
-import { sendMessage } from "../../store/messages/actions";
+import { sendMessage } from "../../store/messages";
 import { Message } from "./Message";
 import styles from "./messageList.module.css";
 

@@ -1,4 +1,4 @@
-import { SEND_MESSAGE } from "./types";
+import { SEND_MESSAGE, ADD_NEW_MESSAGE_LIST } from "./types";
 
 const initialState = {
   messages: {
@@ -18,6 +18,14 @@ export const messagesReducer = (state = initialState, action) => {
             ...state.messages[action.payload.roomId],
             { ...action.payload.message },
           ],
+        },
+      };
+    case ADD_NEW_MESSAGE_LIST:
+      return {
+        ...state,
+        messages: {
+          ...state.messages,
+          [action.payload.name]: [],
         },
       };
     default:
