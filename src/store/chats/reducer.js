@@ -1,4 +1,8 @@
-import { CHANGE_MESSAGE_VALUE, CLEAR_MESSAGE_VALUE } from "./types";
+import {
+  HANDLE_CHANGE_MESSAGE_VALUE,
+  CLEAR_MESSAGE_VALUE,
+  ADD_NEW_CHAT,
+} from "./types";
 
 const initialState = {
   chats: [
@@ -7,22 +11,27 @@ const initialState = {
   ],
 };
 
-const updateChats = (state, roomID, value) =>
+const updateChats = (state, roomId, value) =>
   state.chats.map((chat) => {
-    return chat.name === roomID ? { ...chat, value } : chat;
+    return chat.name === roomId ? { ...chat, value } : chat;
   });
 
-export const chatReducer = (state = initialState, action) => {
+export const chatsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_MESSAGE_VALUE:
+    case HANDLE_CHANGE_MESSAGE_VALUE:
       return {
         ...state,
-        chats: updateChats(state, action.payload.roomID, action.payload.value),
+        chats: updateChats(state, action.payload.roomId, action.payload.value),
       };
     case CLEAR_MESSAGE_VALUE:
       return {
         ...state,
         chats: updateChats(state, action.payload, ""),
+      };
+    case ADD_NEW_CHAT:
+      return {
+        ...state,
+        chats: updateChats(state, action.payload.roomId, action.payload.value),
       };
     default:
       return state;

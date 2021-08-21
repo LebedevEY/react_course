@@ -14,9 +14,9 @@ export const messagesReducer = (state = initialState, action) => {
         ...state,
         messages: {
           ...state.messages,
-          [action.payload.roomID]: [
-            ...state.messages[action.payload.roomID],
-            { ...action.payload.messages, date: new Date() },
+          [action.payload.roomId]: [
+            ...state.messages[action.payload.roomId],
+            { ...action.payload.message },
           ],
         },
       };

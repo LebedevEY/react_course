@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import styles from "./message.module.css";
 
-export function Message({ author, message, date }) {
+export function Message({ author, message }) {
+  const date = new Date();
   return (
     <div
       className={classNames(styles.message, {
