@@ -2,6 +2,7 @@ import { List } from "@material-ui/core";
 import { memo } from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import { AddNewChat } from "./addChat";
 import { Chat } from "./Chat";
 
 const selector = (state) => {
@@ -13,14 +14,17 @@ export const ChatList = memo(() => {
   const chats = useSelector(selector);
 
   return (
-    <List component="nav">
-      {chats.map((chat, index) => {
-        return (
-          <Link key={index} to={`/chat/${chat.name}`}>
-            <Chat name={chat.name} selected={roomId === chat.name} />
-          </Link>
-        );
-      })}
-    </List>
+    <>
+      <List component="nav">
+        {chats.map((chat, index) => {
+          return (
+            <Link key={index} to={`/chat/${chat.name}`}>
+              <Chat name={chat.name} selected={roomId === chat.name} />
+            </Link>
+          );
+        })}
+      </List>
+      <AddNewChat />
+    </>
   );
 });

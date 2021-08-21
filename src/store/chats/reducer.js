@@ -31,7 +31,7 @@ export const chatsReducer = (state = initialState, action) => {
     case ADD_NEW_CHAT:
       return {
         ...state,
-        chats: updateChats(state, action.payload.roomId, action.payload.value),
+        chats: [...state.chats, action.payload],
       };
     default:
       return state;
