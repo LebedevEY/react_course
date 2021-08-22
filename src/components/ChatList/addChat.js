@@ -35,7 +35,7 @@ export function AddNewChat() {
     [dispatch],
   );
 
-  const isExistRoom = () => !room || chats.find((item) => item.name === room);
+  const isExistRoom = !room || chats.find((item) => item.name === room);
 
   const confirmNewRoom = () => {
     handleNewRoom(room);
@@ -74,7 +74,7 @@ export function AddNewChat() {
             Cancel
           </Button>
           <Button
-            disabled={isExistRoom()}
+            disabled={isExistRoom}
             onClick={confirmNewRoom}
             color="primary"
           >

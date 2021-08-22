@@ -62,7 +62,9 @@ export function Header() {
             <Link to="/chat">
               <img className="header_img" src={"/img/GB.png"} alt="GB" />
             </Link>
-            GB Chat
+            <Link style={{ color: "yellow", marginLeft: "15px" }} to="/gists">
+              Gists
+            </Link>
           </Typography>
           {auth && (
             <div>

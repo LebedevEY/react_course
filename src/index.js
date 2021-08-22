@@ -6,7 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import "./index.css";
 import { Header } from "./components";
 import { ThemeProvider } from "./components/ThemeContext";
-import { Chat, Profile } from "./pages";
+import { Chat, Profile, Gists } from "./pages";
 import { store, persistor } from "./store";
 
 const themes = {
@@ -37,11 +37,15 @@ ReactDOM.render(
                     <li>
                       <Link to="/profile">Go to profile</Link>
                     </li>
+                    <li>
+                      <Link to="/gists">Go to gists</Link>
+                    </li>
                   </ul>
                 )}
               />
               <Route path="/chat" component={() => <Chat />} />
               <Route path="/profile" component={() => <Profile />} />
+              <Route path="/gists" component={() => <Gists />} />
               <Route
                 path="*"
                 component={() => (
