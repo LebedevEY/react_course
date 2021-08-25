@@ -1,57 +1,69 @@
-import { CircularProgress } from "@material-ui/core";
-import { useCallback, useEffect, useState } from "react";
+import { CircularProgress, Button } from "@material-ui/core";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { API_URL_PUBLIC } from "../api/request";
+import { getGists } from "../store/gists";
+
+// const API_URL_PUBLIC = "https://api.github.com/gists/public";
+
+// const useGists = () => {
+//   const [gists, setGists] = useState([]);
+//   const [error, setError] = useState(false);
+//   const [loading, setLoading] = useState(false);
+//
+//   const requestGists = async () => {
+//     setLoading(true);
+//     try {
+//       const response = await fetch(API_URL_PUBLIC);
+//       const result = await response.json();
+//       setGists(result);
+//     } catch (err) {
+//       setError(true);
+//       console.log(err);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+//
+//   useEffect(() => {
+//     requestGists();
+//   }, []);
+//
+//   return { gists, loading, error, requestGists };
+// };
 
 export function Gists() {
-  const [gists, setGists] = useState([]);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const { gists, loading, error, requestGists, renderGist } = useGists();
 
-  const renderGist = useCallback(
-    (gist) => <li key={gist.id}>{gist.description || "No description"}</li>,
-    [],
-  );
+  const { gists, gistsLoading } = useSelector((state) => state.gists);
 
-  const requestGists = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(API_URL_PUBLIC);
-
-      if (!response.ok) {
-        throw new Error(`Ошибка: ${response.status}`);
-      }
-      const result = await response.json();
-      setGists(result);
-    } catch (err) {
-      setError(true);
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    requestGists();
-  }, []);
+    dispatch(getGists());
+  }, [dispatch]);
 
-  if (loading) {
+  if (gistsLoading) {
     return <CircularProgress />;
   }
 
-  if (error) {
-    return (
-      <>
-        <h1>Error</h1>
-        <button onClick={requestGists}>Retry</button>
-      </>
-    );
-  }
+  // if (gistsError) {
+  //   return (
+  //     <>
+  //       <h1>Error</h1>
+  //       <Button style={{ background: "darkgray" }}>Retry</Button>
+  //     </>
+  //   );
+  // }
 
   return (
     <div>
       <h1>Gists</h1>
-      <ul>{gists.map(renderGist)}</ul>
+      <ul>
+        {gists.map((gist) => (
+          <li key={gist.id}>{gist.description || "No description"}</li>
+        ))}
+      </ul>
       <Link to="/chat">Go to chat</Link>
     </div>
   );

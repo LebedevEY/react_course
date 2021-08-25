@@ -7,7 +7,10 @@ export const gistsSuccess = (gists) => ({
   payload: gists,
 });
 
-export const gistsError = (error) => ({
-  type: GET_GISTS_ERROR,
-  payload: error,
-});
+export const gistsError = (error) => (
+  {
+    type: GET_GISTS_ERROR,
+    payload: error,
+  },
+  console.log(error)
+);

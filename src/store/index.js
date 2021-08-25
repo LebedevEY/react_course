@@ -1,7 +1,9 @@
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import thunk from "redux-thunk";
 import { chatsReducer } from "./chats";
+import { gistsReducer } from "./gists/";
 import { messagesReducer } from "./messages";
 import { botSendMessage } from "./middlewares";
 import { profileReducer } from "./profile";
@@ -17,13 +19,14 @@ const persistreducer = persistReducer(
     profile: profileReducer,
     chats: chatsReducer,
     messages: messagesReducer,
+    gists: gistsReducer,
   }),
 );
 
 export const store = createStore(
   persistreducer,
   compose(
-    applyMiddleware(botSendMessage),
+    applyMiddleware(botSendMessage, thunk),
     window.__REDUX_DEVTOOLS_EXTENSION__
       ? window.__REDUX_DEVTOOLS_EXTENSION__()
       : (args) => args,

@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f0fab56-afd1-4268-b7e5-9963ec0d5324" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/gists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/request.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Gists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Gists.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/gists/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/gists/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/thunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gbr-3-lesson8" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -68,7 +74,8 @@
       <updated>1628700234474</updated>
       <workItem from="1628700242993" duration="1034000" />
       <workItem from="1629655319964" duration="8607000" />
-      <workItem from="1629829156904" duration="5997000" />
+      <workItem from="1629829156904" duration="6096000" />
+      <workItem from="1629914555285" duration="14101000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,14 @@
 import { gistsStart, gistsError, gistsSuccess } from "./actions";
 
-export const getGists = (page = 1) => {
-  return async (dispatch, api) => {
-    dispatch(gistsStart());
+const API_URL_PUBLIC = "https://api.github.com/gists/public";
 
-    const { data } = await api.getGistsApi(page);
-  };
+export const getGists = () => async (dispatch) => {
+  try {
+    dispatch(gistsStart());
+    const response = await fetch(API_URL_PUBLIC);
+    const result = await response.json();
+    dispatch(gistsSuccess(result));
+  } catch (error) {
+    dispatch(gistsError(error));
+  }
 };
