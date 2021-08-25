@@ -35,7 +35,9 @@ import { getGists } from "../store/gists";
 export function Gists() {
   // const { gists, loading, error, requestGists, renderGist } = useGists();
 
-  const { gists, gistsLoading } = useSelector((state) => state.gists);
+  const { gists, gistsLoading, gistsError } = useSelector(
+    (state) => state.gists,
+  );
 
   const dispatch = useDispatch();
 
@@ -47,14 +49,16 @@ export function Gists() {
     return <CircularProgress />;
   }
 
-  // if (gistsError) {
-  //   return (
-  //     <>
-  //       <h1>Error</h1>
-  //       <Button style={{ background: "darkgray" }}>Retry</Button>
-  //     </>
-  //   );
-  // }
+  // console.log(gistsError);
+
+  if (gistsError) {
+    return (
+      <>
+        <h1>Error</h1>
+        <Button style={{ background: "darkgray" }}>Retry</Button>
+      </>
+    );
+  }
 
   return (
     <div>
