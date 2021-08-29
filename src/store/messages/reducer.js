@@ -1,4 +1,4 @@
-import { SEND_MESSAGE, ADD_NEW_MESSAGE_LIST } from "./types";
+import { SEND_MESSAGE, ADD_MESSAGE_LIST } from "./types";
 
 const initialState = {
   messages: {
@@ -20,7 +20,7 @@ export const messagesReducer = (state = initialState, action) => {
           ],
         },
       };
-    case ADD_NEW_MESSAGE_LIST:
+    case ADD_MESSAGE_LIST:
       return {
         ...state,
         messages: {

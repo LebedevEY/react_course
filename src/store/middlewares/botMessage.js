@@ -1,4 +1,4 @@
-import { sendMessage, SEND_MESSAGE } from "../messages";
+import { sendMessageWithThunk, SEND_MESSAGE } from "../messages";
 
 export const botSendMessage = (store) => (next) => (action) => {
   if (
@@ -7,7 +7,7 @@ export const botSendMessage = (store) => (next) => (action) => {
   ) {
     setTimeout(() => {
       store.dispatch(
-        sendMessage(
+        sendMessageWithThunk(
           { author: "Bot", message: "Hello from Bot" },
           action.payload.roomId,
         ),

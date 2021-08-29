@@ -1,9 +1,13 @@
 import { Button, Input, Icon } from "@material-ui/core";
+import { nanoid } from "nanoid";
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { handleChangeMessageValue, clearMessageValue } from "../../store/chats";
-import { sendMessage } from "../../store/messages";
+import {
+  handleChangeMessageValueFB,
+  clearMessageValue,
+} from "../../store/chats";
+import { sendMessageWithThunk } from "../../store/messages";
 import { Message } from "./Message";
 import styles from "./messageList.module.css";
 
@@ -24,13 +28,18 @@ export const MessageList = () => {
 
   const handleSendMessage = () => {
     if (value) {
-      dispatch(sendMessage({ author: "User", message: value }, roomId));
+      dispatch(
+        sendMessageWithThunk(
+          { id: nanoid(), author: "User", message: value },
+          roomId,
+        ),
+      );
       dispatch(clearMessageValue(roomId));
     }
   };
 
   const handlePressInput = ({ code }) => {
-    if (code === "Enter") {
+    if (code === "Enter" || code == "NumpadEnter") {
       handleSendMessage();
     }
   };
@@ -58,7 +67,7 @@ export const MessageList = () => {
         <Input
           value={value}
           onChange={(e) =>
-            dispatch(handleChangeMessageValue(e.target.value, roomId))
+            dispatch(handleChangeMessageValueFB(e.target.value, roomId))
           }
           onKeyPress={handlePressInput}
           fullWidth={true}

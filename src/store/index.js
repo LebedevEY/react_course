@@ -2,6 +2,12 @@ import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
+import { getChatsApi, handleChangeMessageApi, addChatApi } from "../api/chats";
+import {
+  getMessagesApi,
+  sendMessageApi,
+  addMessageListApi,
+} from "../api/messages";
 import { chatsReducer } from "./chats";
 import { gistsReducer } from "./gists/";
 import { messagesReducer } from "./messages";
@@ -26,7 +32,17 @@ const persistreducer = persistReducer(
 export const store = createStore(
   persistreducer,
   compose(
-    applyMiddleware(botSendMessage, thunk),
+    applyMiddleware(
+      botSendMessage,
+      thunk.withExtraArgument({
+        getChatsApi,
+        getMessagesApi,
+        sendMessageApi,
+        handleChangeMessageApi,
+        addChatApi,
+        addMessageListApi,
+      }),
+    ),
     window.__REDUX_DEVTOOLS_EXTENSION__
       ? window.__REDUX_DEVTOOLS_EXTENSION__()
       : (args) => args,

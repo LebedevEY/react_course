@@ -1,3 +1,4 @@
 export * from "./reducer";
-export * from "./types";
+export * from "./thunk";
 export * from "./actions";
+export * from "./types";

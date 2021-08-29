@@ -11,7 +11,6 @@ export const gistsReducer = (state = initialState, action) => {
     case GET_GISTS_START:
       return {
         ...state,
-        gistsError: null,
         gistsLoading: true,
       };
     case GET_GISTS_SUCCESS:
