@@ -1,11 +1,10 @@
 import { Button, Input, Icon } from "@material-ui/core";
-import { nanoid } from "nanoid";
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
-  handleChangeMessageValueFB,
   clearMessageValue,
+  handleChangeMessageValueFB,
 } from "../../store/chats";
 import { sendMessageWithThunk } from "../../store/messages";
 import { Message } from "./Message";
@@ -23,23 +22,19 @@ export const MessageList = () => {
   });
 
   const value = useSelector((state) => {
-    return state.chats.chats.find((chat) => chat.name === roomId)?.value || "";
+    return state.chats.chats.find((chat) => chat.title === roomId)?.value || "";
   });
 
   const handleSendMessage = () => {
     if (value) {
       dispatch(
-        sendMessageWithThunk(
-          { id: nanoid(), author: "User", message: value },
-          roomId,
-        ),
+        sendMessageWithThunk({ author: "User", message: value }, roomId),
       );
-      dispatch(clearMessageValue(roomId));
     }
   };
 
   const handlePressInput = ({ code }) => {
-    if (code === "Enter" || code == "NumpadEnter") {
+    if (code === "Enter" || code === "NumpadEnter") {
       handleSendMessage();
     }
   };

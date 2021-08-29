@@ -7,7 +7,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
 import React, { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addChatFB } from "../../store/chats";
+import { addNewChatFB } from "../../store/chats";
 import { addNewMessageListFB } from "../../store/messages";
 
 const selector = (state) => state.chats.chats;
@@ -27,10 +27,13 @@ export function AddNewChat() {
 
   const dispatch = useDispatch();
 
-  const handleNewRoom = (room) => {
-    dispatch(addChatFB(room));
-    dispatch(addNewMessageListFB(room));
-  };
+  const handleNewRoom = useCallback(
+    (room) => {
+      dispatch(addNewChatFB({ title: room, value: "" }));
+      dispatch(addNewMessageListFB(room));
+    },
+    [dispatch],
+  );
 
   const isExistRoom = !room || chats.find((item) => item.title === room);
 

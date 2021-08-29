@@ -1,5 +1,5 @@
 import { List } from "@material-ui/core";
-import { memo, useEffect } from "react";
+import { memo } from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { AddNewChat } from "./addChat";
@@ -12,10 +12,6 @@ const selector = (state) => {
 export const ChatList = memo(() => {
   const { roomId } = useParams();
   const chats = useSelector(selector);
-
-  useEffect(() => {
-    console.log(chats);
-  });
 
   return (
     <>

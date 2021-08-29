@@ -11,7 +11,7 @@ const initialState = {
 
 const updateChats = (state, roomId, value) =>
   state.chats.map((chat) => {
-    return chat.name === roomId ? { ...chat, value } : chat;
+    return chat.title === roomId ? { ...chat, value } : chat;
   });
 
 export const chatsReducer = (state = initialState, action) => {

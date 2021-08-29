@@ -5,44 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f0fab56-afd1-4268-b7e5-9963ec0d5324" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/chats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/messages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthForm/AuthForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthForm/AuthTemplate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthForm/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Route/Route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Route/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/SignIn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/SignUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/chats/thunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/messages/thunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/chats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/messages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChatList/addChat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/addChat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Gists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Gists.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/chats/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/chats/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/gists/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/chats/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/thunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/messages/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/middlewares/botMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/middlewares/botMessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/thunk.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +85,8 @@
       <workItem from="1629655319964" duration="8607000" />
       <workItem from="1629829156904" duration="6096000" />
       <workItem from="1629914555285" duration="16499000" />
-      <workItem from="1630134757507" duration="46513000" />
+      <workItem from="1630134757507" duration="46647000" />
+      <workItem from="1630221743443" duration="20530000" />
     </task>
     <servers />
   </component>

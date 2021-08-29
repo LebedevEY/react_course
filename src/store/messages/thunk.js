@@ -1,3 +1,4 @@
+import debounce from "lodash.debounce";
 import { clearMessageValue } from "../chats";
 import { sendMessage, addNewMessageList } from "./actions";
 import { GET_MESSAGES } from "./types";
@@ -29,9 +30,17 @@ export const getMessagesFB =
     });
   };
 
+const cb = debounce(async (addMessageList) => {
+  try {
+    await addMessageList();
+  } catch (err) {
+    console.log("ERROR", err);
+  }
+}, 500);
+
 export const addNewMessageListFB =
   (roomId) =>
-  async (dispatch, _, { addMessageListApi }) => {
-    await addMessageListApi(roomId);
+  async (dispatch, _, { addNewMessageListApi }) => {
+    await cb(() => addNewMessageListApi(roomId));
     dispatch(addNewMessageList(roomId));
   };

@@ -2,11 +2,15 @@ import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
-import { getChatsApi, handleChangeMessageApi, addChatApi } from "../api/chats";
+import {
+  getChatsApi,
+  handleChangeMessageApi,
+  addNewChatApi,
+} from "../api/chats";
 import {
   getMessagesApi,
   sendMessageApi,
-  addMessageListApi,
+  addNewMessageListApi,
 } from "../api/messages";
 import { chatsReducer } from "./chats";
 import { gistsReducer } from "./gists/";
@@ -39,8 +43,8 @@ export const store = createStore(
         getMessagesApi,
         sendMessageApi,
         handleChangeMessageApi,
-        addChatApi,
-        addMessageListApi,
+        addNewChatApi,
+        addNewMessageListApi,
       }),
     ),
     window.__REDUX_DEVTOOLS_EXTENSION__

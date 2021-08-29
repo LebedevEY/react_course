@@ -19,10 +19,6 @@ const themes = {
   },
 };
 
-const addChats = () => {
-  db.ref("chats").child("room2").set({ title: "room2", value: "" });
-};
-
 const App = () => {
   const [session, setSession] = useState(null);
 
@@ -41,7 +37,6 @@ const App = () => {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter>
-            <button onClick={addChats}>Добавить чат</button>
             <ThemeProvider themes={themes} initialTheme="dark">
               <Header />
               <Switch>

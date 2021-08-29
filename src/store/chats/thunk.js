@@ -1,38 +1,44 @@
 import debounce from "lodash.debounce";
-import { handleChangeMessageValue, addNewChat } from "./actions";
+import { addNewChat, handleChangeMessageValue } from "./actions";
 import { GET_CHATS } from "./types";
 
 export const getChatsFB =
   () =>
-  (dispatch, _, { getChatsApi }) => {
-    getChatsApi().then((snapshot) => {
-      const chats = [];
+  async (dispatch, _, { getChatsApi }) => {
+    try {
+      await getChatsApi().then((snapshot) => {
+        const chats = [];
 
-      snapshot.forEach((snap) => {
-        chats.push(snap.val());
+        snapshot.forEach((snap) => {
+          chats.push(snap.val());
+        });
+        dispatch({ type: GET_CHATS, payload: chats });
       });
-      dispatch({ type: GET_CHATS, payload: chats });
-    });
+    } catch (err) {
+      console.log("ERROR", err);
+    }
   };
 
 const cb = debounce(async (handleChangeMessage) => {
-  await handleChangeMessage();
+  try {
+    await handleChangeMessage();
+  } catch (err) {
+    console.log("ERROR:", err);
+  }
 }, 500);
 
 export const handleChangeMessageValueFB =
   (messageValue, roomId) =>
   async (dispatch, _, { handleChangeMessageApi }) => {
-    try {
-      await cb(() => handleChangeMessageApi(roomId, messageValue));
+    await cb(() => handleChangeMessageApi(roomId, messageValue));
 
-      dispatch(handleChangeMessageValue(messageValue, roomId));
-    } catch (err) {
-      console.log("ERROR", err);
-    }
+    dispatch(handleChangeMessageValue(messageValue, roomId));
   };
-export const addChatFB =
-  (roomId) =>
-  (dispatch, _, { addChatApi }) => {
-    addChatApi(roomId);
-    dispatch(addNewChat(roomId));
+
+export const addNewChatFB =
+  (chat) =>
+  async (dispatch, _, { addNewChatApi }) => {
+    await addNewChatApi(chat);
+
+    dispatch(addNewChat(chat));
   };
