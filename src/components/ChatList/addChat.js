@@ -6,13 +6,16 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
 import React, { useCallback, useState } from "react";
-import { useDispatch } from "react-redux";
-import { addNewChat } from "../../store/chats";
-import { addNewMessageList } from "../../store/messages";
+import { useDispatch, useSelector } from "react-redux";
+import { addNewChatFB } from "../../store/chats";
+import { addNewMessageListFB } from "../../store/messages";
+
+const selector = (state) => state.chats.chats;
 
 export function AddNewChat() {
   const [open, setOpen] = React.useState(false);
   const [room, setRoom] = useState("");
+  const chats = useSelector(selector);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -26,11 +29,13 @@ export function AddNewChat() {
 
   const handleNewRoom = useCallback(
     (room) => {
-      dispatch(addNewChat({ name: room, value: "" }));
-      dispatch(addNewMessageList({ name: room }));
+      dispatch(addNewChatFB({ title: room, value: "" }));
+      dispatch(addNewMessageListFB(room));
     },
     [dispatch],
   );
+
+  const isExistRoom = !room || chats.find((item) => item.title === room);
 
   const confirmNewRoom = () => {
     handleNewRoom(room);
@@ -41,8 +46,6 @@ export function AddNewChat() {
   const handleChangeRoom = ({ target }) => {
     setRoom(() => target.value);
   };
-
-  const getValue = () => console.log(room);
 
   return (
     <div>
@@ -70,11 +73,12 @@ export function AddNewChat() {
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={confirmNewRoom} color="primary">
+          <Button
+            disabled={isExistRoom}
+            onClick={confirmNewRoom}
+            color="primary"
+          >
             Add
-          </Button>
-          <Button onClick={getValue} color="primary">
-            Log
           </Button>
         </DialogActions>
       </Dialog>

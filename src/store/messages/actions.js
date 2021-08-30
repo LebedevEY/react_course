@@ -1,4 +1,4 @@
-import { SEND_MESSAGE, ADD_NEW_MESSAGE_LIST } from "./types";
+import { SEND_MESSAGE, ADD_MESSAGE_LIST } from "./types";
 
 export const sendMessage = (message, roomId) => ({
   type: SEND_MESSAGE,
@@ -6,6 +6,6 @@ export const sendMessage = (message, roomId) => ({
 });
 
 export const addNewMessageList = (roomId) => ({
-  type: ADD_NEW_MESSAGE_LIST,
+  type: ADD_MESSAGE_LIST,
   payload: roomId,
 });

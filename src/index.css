@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   width: 80%;
   margin: 0 auto;
@@ -15,9 +20,26 @@ code {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: darkred;
 }
 
 .header_img {
   width: 40px;
   margin-right: 10px;
+}
+
+.home_ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  list-style-type: none;
+  font-family: sans-serif;
+  font-weight: bold;
 }

@@ -18,8 +18,8 @@ export const ChatList = memo(() => {
       <List component="nav">
         {chats.map((chat, index) => {
           return (
-            <Link key={index} to={`/chat/${chat.name}`}>
-              <Chat name={chat.name} selected={roomId === chat.name} />
+            <Link key={index} to={`/chat/${chat.title}`}>
+              <Chat name={chat.title} selected={roomId === chat.title} />
             </Link>
           );
         })}

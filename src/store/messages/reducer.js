@@ -1,13 +1,10 @@
-import { SEND_MESSAGE, ADD_NEW_MESSAGE_LIST } from "./types";
+import { SEND_MESSAGE, ADD_MESSAGE_LIST } from "./types";
 
 const initialState = {
-  messages: {
-    room1: [],
-    room2: [],
-  },
+  messages: {},
 };
 
-export const messagesReducer = (state = initialState, action) => {
+export const messagesReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case SEND_MESSAGE:
       return {
@@ -15,12 +12,12 @@ export const messagesReducer = (state = initialState, action) => {
         messages: {
           ...state.messages,
           [action.payload.roomId]: [
-            ...state.messages[action.payload.roomId],
-            { ...action.payload.message },
+            ...(state.messages[action.payload.roomId] || []),
+            { ...action.payload.message, id: action.payload.roomId },
           ],
         },
       };
-    case ADD_NEW_MESSAGE_LIST:
+    case ADD_MESSAGE_LIST:
       return {
         ...state,
         messages: {

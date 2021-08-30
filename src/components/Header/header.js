@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { firebaseApp } from "../../api/firebase";
 import { ThemeContext } from "../ThemeContext";
 
 const useStyles = makeStyles((theme) => ({
@@ -23,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+
+const signOut = () => {
+  firebaseApp.auth().signOut();
+};
 
 export function Header() {
   const classes = useStyles();
@@ -62,7 +67,9 @@ export function Header() {
             <Link to="/chat">
               <img className="header_img" src={"/img/GB.png"} alt="GB" />
             </Link>
-            GB Chat
+            <Link style={{ color: "yellow", marginLeft: "15px" }} to="/gists">
+              Gists
+            </Link>
           </Typography>
           {auth && (
             <div>
@@ -92,7 +99,7 @@ export function Header() {
                 <MenuItem>
                   <Link to="/profile">Profile</Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose}>History</MenuItem>
+                <MenuItem onClick={signOut}>SIGN OUT</MenuItem>
               </Menu>
             </div>
           )}

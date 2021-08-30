@@ -4,12 +4,10 @@ import {
   ADD_NEW_CHAT,
 } from "./types";
 
-export const addNewChat = (chat) => {
-  return {
-    type: ADD_NEW_CHAT,
-    payload: chat,
-  };
-};
+export const addNewChat = (chat) => ({
+  type: ADD_NEW_CHAT,
+  payload: chat,
+});
 
 export const handleChangeMessageValue = (value, roomId) => ({
   type: HANDLE_CHANGE_MESSAGE_VALUE,
