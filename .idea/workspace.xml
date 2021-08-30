@@ -6,8 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1f0fab56-afd1-4268-b7e5-9963ec0d5324" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Gists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Gists.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/gists/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/chats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatList/addChat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/addChat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/chats/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/chats/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/chats/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/thunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/thunk.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gbr-3-lesson8" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gbr-3-lesson10" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -56,6 +67,11 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Евгений\OneDrive\Рабочий стол\Учёба\JS\react\react_course\src\api" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,7 +84,9 @@
       <workItem from="1628700242993" duration="1034000" />
       <workItem from="1629655319964" duration="8607000" />
       <workItem from="1629829156904" duration="6096000" />
-      <workItem from="1629914555285" duration="16337000" />
+      <workItem from="1629914555285" duration="16499000" />
+      <workItem from="1630134757507" duration="46647000" />
+      <workItem from="1630221743443" duration="20530000" />
     </task>
     <servers />
   </component>
