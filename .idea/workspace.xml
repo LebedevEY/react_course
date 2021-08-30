@@ -6,19 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f0fab56-afd1-4268-b7e5-9963ec0d5324" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/chats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatList/addChat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/addChat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/thunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/thunk.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +73,8 @@
       <workItem from="1629829156904" duration="6096000" />
       <workItem from="1629914555285" duration="16499000" />
       <workItem from="1630134757507" duration="46647000" />
-      <workItem from="1630221743443" duration="20530000" />
+      <workItem from="1630221743443" duration="21133000" />
+      <workItem from="1630343899275" duration="910000" />
     </task>
     <servers />
   </component>
