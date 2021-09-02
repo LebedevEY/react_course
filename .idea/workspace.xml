@@ -5,20 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f0fab56-afd1-4268-b7e5-9963ec0d5324" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/__tests/gists/thunk.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/chats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/ChatList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatList/addChat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/addChat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/Message/Message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chats/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chats/thunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Gists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Gists.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/gists/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/gists/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/gists/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/gists/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/gists/thunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/thunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/middlewares/botMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/middlewares/botMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +68,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gbr-3-lesson10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -70,8 +81,89 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Евгений\OneDrive\Рабочий стол\Учёба\JS\react\react_course\src" />
+      <recent name="C:\Users\Евгений\OneDrive\Рабочий стол\Учёба\JS\react\react_course\" />
       <recent name="C:\Users\Евгений\OneDrive\Рабочий стол\Учёба\JS\react\react_course\src\api" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.chat list tests">
+    <configuration name="chat list tests" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/__tests/chat_list/chatList.test.js" />
+      <test-names>
+        <test-name value="chat list tests" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="get gists thunk.get gists success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/store/__tests/gists/thunk.test.js" />
+      <test-names>
+        <test-name value="get gists thunk" />
+        <test-name value="get gists success" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="gists reducer" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/store/__tests/gists/thunk.test.js" />
+      <test-names>
+        <test-name value="gists reducer" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="gists reducer.gist success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/store/__tests/gists/thunk.test.js" />
+      <test-names>
+        <test-name value="gists reducer" />
+        <test-name value="gist success" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="gists reducer.gists error" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/store/__tests/gists/thunk.test.js" />
+      <test-names>
+        <test-name value="gists reducer" />
+        <test-name value="gists error" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.chat list tests" />
+        <item itemvalue="Jest.gists reducer" />
+        <item itemvalue="Jest.gists reducer.gists error" />
+        <item itemvalue="Jest.gists reducer.gist success" />
+        <item itemvalue="Jest.get gists thunk.get gists success" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,6 +179,11 @@
       <workItem from="1629914555285" duration="16499000" />
       <workItem from="1630134757507" duration="46647000" />
       <workItem from="1630221743443" duration="20530000" />
+      <workItem from="1630432019382" duration="5615000" />
+      <workItem from="1630440525787" duration="244000" />
+      <workItem from="1630517791424" duration="7031000" />
+      <workItem from="1630599841356" duration="9296000" />
+      <workItem from="1630615322850" duration="4554000" />
     </task>
     <servers />
   </component>
