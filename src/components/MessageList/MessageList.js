@@ -2,10 +2,7 @@ import { Button, Input, Icon } from "@material-ui/core";
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import {
-  clearMessageValue,
-  handleChangeMessageValueFB,
-} from "../../store/chats";
+import { handleChangeMessageValueFB } from "../../store/chats";
 import { sendMessageWithThunk } from "../../store/messages";
 import { Message } from "./Message";
 import styles from "./messageList.module.css";
