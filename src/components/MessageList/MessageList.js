@@ -1,8 +1,11 @@
 import { Button, Input, Icon } from "@material-ui/core";
-import { useRef } from "react";
+import { useRef, useCallback, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { handleChangeMessageValueFB } from "../../store/chats";
+import {
+  clearMessageValue,
+  handleChangeMessageValueFB,
+} from "../../store/chats";
 import { sendMessageWithThunk } from "../../store/messages";
 import { Message } from "./Message";
 import styles from "./messageList.module.css";
@@ -27,6 +30,7 @@ export const MessageList = () => {
       dispatch(
         sendMessageWithThunk({ author: "User", message: value }, roomId),
       );
+      dispatch(clearMessageValue());
     }
   };
 
@@ -36,23 +40,21 @@ export const MessageList = () => {
     }
   };
 
-  // const handleScrollBottom = useCallback(() => {
-  //   if (ref.current) {
-  //     ref.current.scrollTo(0, ref.current.scrollHeight);
-  //   }
-  // }, [messages]);
-  //
-  // useEffect(() => {
-  //   handleScrollBottom();
-  // }, [handleScrollBottom]);
-  //
-  // const myLog = () => console.log(ref.current);
+  const handleScrollBottom = useCallback(() => {
+    if (ref.current) {
+      ref.current.scrollTo(0, ref.current.scrollHeight);
+    }
+  }, [messages]);
+
+  useEffect(() => {
+    handleScrollBottom();
+  }, [handleScrollBottom]);
 
   return (
     <>
-      <div ref={ref}>
+      <div className={styles.messages_list} ref={ref}>
         {messages.map((message, id) => (
-          <Message key={id} {...message} />
+          <Message key={id} message={message} />
         ))}
       </div>
       <div className={styles.input}>

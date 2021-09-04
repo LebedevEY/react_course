@@ -8,7 +8,7 @@ const onSubmit = (email, password) => {
 
 export function SignUp() {
   return (
-    <AuthTemplate link={<Link to="sing_in">Есть аккаунт? Войти</Link>}>
+    <AuthTemplate link={<Link to="sign_in">Есть аккаунт? Войти</Link>}>
       <AuthForm
         title="Регистация"
         submitButton="Зарегистрироваться"

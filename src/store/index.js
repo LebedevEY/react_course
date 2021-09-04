@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 import {
   getChatsApi,
   handleChangeMessageApi,
+  clearMessageValueApi,
   addNewChatApi,
 } from "../api/chats";
 import {
@@ -43,6 +44,7 @@ export const store = createStore(
         getMessagesApi,
         sendMessageApi,
         handleChangeMessageApi,
+        clearMessageValueApi,
         addNewChatApi,
         addNewMessageListApi,
       }),

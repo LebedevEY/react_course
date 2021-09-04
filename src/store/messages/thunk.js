@@ -5,9 +5,10 @@ import { GET_MESSAGES } from "./types";
 
 export const sendMessageWithThunk =
   (message, roomId) =>
-  async (dispatch, _, { sendMessageApi }) => {
+  async (dispatch, _, { sendMessageApi, clearMessageValueApi }) => {
     try {
       await sendMessageApi(roomId, message);
+      await clearMessageValueApi(roomId);
 
       dispatch(sendMessage(message, roomId));
       dispatch(clearMessageValue(roomId));
