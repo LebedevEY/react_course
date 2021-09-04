@@ -14,6 +14,10 @@ export function Gists() {
     dispatch(getGists());
   }, [dispatch]);
 
+  const retry = () => {
+    dispatch(getGists());
+  };
+
   if (gistsLoading) {
     return <CircularProgress />;
   }
@@ -22,7 +26,7 @@ export function Gists() {
     return (
       <>
         <h1>Error</h1>
-        <Button onClick={getGists} style={{ background: "darkgray" }}>
+        <Button onClick={retry} style={{ background: "darkgray" }}>
           Retry
         </Button>
       </>

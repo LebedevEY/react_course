@@ -1,15 +1,15 @@
 import classNames from "classnames";
 import styles from "./message.module.css";
 
-export function Message({ author, message }) {
+export function Message({ message }) {
   return (
     <div
       className={classNames(styles.message, {
-        [styles.currentMessage]: author === "User",
+        [styles.currentMessage]: message.author === "User",
       })}
     >
-      <h3>{message}</h3>
-      <p>{author}</p>
+      <h3>{message.message}</h3>
+      <p>{message.author}</p>
     </div>
   );
 }
